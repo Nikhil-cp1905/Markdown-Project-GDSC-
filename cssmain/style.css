@@ -1,0 +1,154 @@
+.container{
+    display:flex;
+}
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  padding:2px;
+  scroll-behaviour:smooth;
+}
+body {
+    overflow-x: hidden;
+    padding-bottom: 30px;
+    background: #18f4f4;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 50000px 5000px;
+}
+.center{
+  text-align:center;
+  margin-top:10px;
+}
+#editor {
+    --a: 0.5deg;
+    width: 250px;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
+    
+    transition: .4s;
+    cursor: pointer;
+    margin: left;
+    display: flex;
+    margin-left:10px;
+    margin-top:10px;
+    margin-right: auto;
+    background-color: #FFFDD0;
+    width: 110%;
+    height: 1000px;
+    overflow: allow;
+    border: 7px solid orange;
+    justify-content: left;
+    border-radius:;
+    padding: 100x;
+    filter: drop-shadow(0px 0px 10px orange);
+}10
+#preview img {
+    margin: right;
+    max-width: 100%;
+    max-height:;
+}
+.c{
+
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+
+.alt {
+    --r: 1,1;
+    -webkit-mask: linear-gradient(45deg,#000c 40%,#000,#000c 60%) 0 100%/250% 250%;
+}
+
+#preview:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+}
+#editor:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+}
+
+.alt:hover {
+    -webkit-mask-position: 100% 0;
+}
+
+#preview {
+    --a: 0.5deg; /* control the angle of rotation (the smaller, the better) */
+    width: 250px;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
+    -webkit-mask: linear-gradient(135deg,#000c 40%,#000,#000c 60%) 100% 100%/250% 250%;
+    transition: .4s;
+    cursor: pointer;
+    background-image: linear-gradient(#F1F1F1 50%, #BBCCDD 50%);
+    background-size: 100% 0.1rem;
+    filter: drop-shadow(0px 0px 10px purple);
+    margin: right;
+    background-color: #FFC0CB;
+    width: 50%;
+    border: 7px solid purple;
+    border-radius: 0px;
+    padding: 25px;
+
+}
+
+::-webkit-scrollbar{
+width:10px;
+background-color:black;
+border-top-right-radius:15px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius:15px;
+  background-color:rgb(219, 125, 17);
+  border:2px solid #92530b;
+}
+::-webkit-scrollbar-track{
+  border-radius:20px;
+}
+@media(max-width: 768px){
+  #preview{
+    width:90%;
+  }
+}
+#container {
+    display: flex;
+    margin-top: 20px/* establish flex container */
+    flex-direction: row; /* default value; can be omitted */
+    flex-wrap: nowrap; /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+}
+
+    #container > div {
+        margin-top: 50px;
+        width: 500px;
+        height: 1000px;
+        border: 10px dashed red;
+    }
+
+@media(max-width: 768px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #18f4f4;
+        overflow-x: hidden;
+    }
+    #preview {
+        width: 90%;
+    }
+    #container {
+        flex-direction:column;
+        width: 90%;
+        height: 90%;
+    }
+        #container > div {
+            flex-direction: column;
+            width: 90%;
+            height: 90%;
+        }
+}
